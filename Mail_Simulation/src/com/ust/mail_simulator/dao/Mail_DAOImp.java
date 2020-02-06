@@ -76,21 +76,7 @@ public class Mail_DAOImp implements Mail_DAO{
 		return mlist;
 		
 		
-		/*Session ss=sf.openSession();
-		String email=(String) hs.getAttribute("email");
-		Criteria cr =ss.createCriteria(User_info.class);
-		cr.add(Restrictions.eq("email",email));
-		User_info udto1= (User_info) cr.uniqueResult();
-		int id=udto1.getId();
-
-		Query q=ss.createQuery(" from Mail_info where To_id=? and Status!=? and Status!=?");
-		q.setParameter(0,id);
-		q.setParameter(1,"Deleted Mail");
-		q.setParameter(2,"draft");
-		List<Mail_info> mlist=q.list();
-
-		ss.close();
-		return mlist;*/
+		
 	}
 
 	@Override
@@ -113,19 +99,6 @@ public class Mail_DAOImp implements Mail_DAO{
 		ss.close();
 		return mlist;
 		
-		
-		/*Session ss=sf.openSession();
-		String email=(String) hs.getAttribute("email");
-		Criteria cr =ss.createCriteria(User_info.class);
-		cr.add(Restrictions.eq("email",email));
-		User_info udto1= (User_info) cr.uniqueResult();
-		int id=udto1.getId();
-		Criteria cr1 =ss.createCriteria(Mail_info.class);
-		cr1.add(Restrictions.eq("sentby",email));
-		cr1.add(Restrictions.eq("Status","sent"));
-		List<Mail_info> mlist=cr1.list();
-		ss.close();
-		return mlist;*/
 	}
 
 	@Override
@@ -143,21 +116,6 @@ public class Mail_DAOImp implements Mail_DAO{
 		return mlist;
 		
 		
-		/*Session ss=sf.openSession();
-		String email=(String) hs.getAttribute("email");
-		Criteria cr =ss.createCriteria(User_info.class);
-		cr.add(Restrictions.eq("email", email));
-		User_info udto=(User_info) cr.uniqueResult();
-		int id=udto.getId();
-		Criteria cr1=ss.createCriteria(Mail_info.class);
-		cr1.add(Restrictions.eq("sentto", email));
-		Query q=ss.createQuery("from Mail_info where Status=? and (sentby=? OR sentto=?)");
-		q.setParameter(0, "Deleted Mail");
-		q.setParameter(1, email);
-		q.setParameter(2, email);
-		List<Mail_info> mlist=q.list();
-		ss.close();
-		return mlist;*/
    }
 
 	@Override
